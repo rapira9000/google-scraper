@@ -1,0 +1,54 @@
+include header
+
+div.page-content.page-home
+        include tabs
+        form(class='form-action', method='GET')
+            div.content-wrapper
+                div.list-products
+                    if (products.length)
+                        each product in products
+                            include product
+                    else
+                        p Please search correctly
+                div.sidebar
+                    div.store-type
+                        p.sidebar-title Choose store type
+                        div
+                        label(for='google-market') google market
+                            input(
+                            type='checkbox',
+                            name='gMarket',
+                            checked='true',
+                            id='google-market'
+                            value='1'
+                        )
+                    hr
+                    p.sidebar-title Choose country
+                    select(
+                    name='country'
+                    )
+                        option(value="")
+                        each country, index in countries
+                            option(value=index) #{country.name}
+                    hr
+                    p.sidebar-title Choose category
+                    select(
+                    name='category'
+                    )
+                        option(value="")
+                        each cat in gMarketCategories
+                            option(value=cat) #{cat}
+                    hr
+                    p.sidebar-title Choose collections
+                    select(
+                    name='collection'
+                    )
+                        option(value="")
+                        each collection in collections
+                            option(value=collection) #{collection}
+                    hr
+                    div.search-button__wrapper
+                        button.search-app search apps
+
+
+include footer

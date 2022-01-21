@@ -1,0 +1,14 @@
+div.product-card
+    div.product-card__image
+        img(src=product.icon)
+    div.product-card__content
+        a(href=product.url, class='product-card__link', target='_blank') #{product.title}
+        div.product-card__appId appId: #{product.appId}
+        div.product-card__score score: #{product.scoreText}
+        div.product-card__buttons-panel
+            - var dataEventType = product.observing ? 'remove' : "add"
+            - var btnText = product.observing ? 'remove to observe' : "add to observe"
+            button.add-to-observe(
+                data-app-id=product.appId
+                data-event-type=dataEventType
+            ) #{btnText}

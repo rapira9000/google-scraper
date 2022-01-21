@@ -1,0 +1,13 @@
+include header
+
+div.page-content
+    include tabs
+    div.content-wrapper
+        div.list-products
+            if (products.length)
+                each product in products
+                    include product
+            else
+                p Please search correctly
+
+include footer

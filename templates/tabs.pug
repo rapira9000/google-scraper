@@ -1,0 +1,13 @@
+div.tabs
+    div.tabs-buttons
+        - var linkDisabledClassName = 'tab-active';
+        - var linkSearchDisabledClassName = btnSearchDisabled ? " " + linkDisabledClassName : "";
+        - var linkObserveDisabledClassName = btnObserveDisabled ? " " + linkDisabledClassName : "";
+        a(
+        href='/',
+        class='tab-button tab-search' + linkSearchDisabledClassName
+        ) Поиск
+        a(
+        href='/observe/',
+        class='tab-button tab-observation' + linkObserveDisabledClassName
+        ) Наблюдение

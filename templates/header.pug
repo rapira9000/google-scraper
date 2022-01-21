@@ -1,0 +1,29 @@
+doctype html
+html
+    header
+        meta(charset='UTF-8')
+        title test project
+
+        block scripts
+            script(src='/public/common.js')
+
+        block styles
+            link(rel="stylesheet" type="text/css" href="/public/style.css")
+
+
+    body
+        div.header
+            div.buttons
+                if !!user
+                    div.user-name #{user.displayName}
+                    div.log-btn__wrapper
+                        a(
+                            href='/logout/'
+                            class='log-button'
+                        ) log out
+                else
+                    div.log-btn__wrapper
+                        a(
+                            href='/google/log-in/',
+                            class='log-button'
+                        ) log in

@@ -1,0 +1,25 @@
+{
+  "name": "exp-oauth2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
+  },
+  "author": "vuka",
+  "license": "MIT",
+  "dependencies": {
+    "app-store-scraper": "^0.17.0",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "countries-list": "^2.6.1",
+    "express": "^4.17.1",
+    "google-play-scraper": "^8.1.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pug": "^3.0.2"
+  }
+}
